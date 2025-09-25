@@ -1,0 +1,116 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+     
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Form styles */
+form {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+}
+
+/* Blog listing styles */
+ul.blog-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 7rem;
+}
+#login-section{
+ margin-top:5rem;
+ margin-bottom:7rem;
+}
+
+#loadingSpinner {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+
+ul.blog-list li {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul.blog-list h4 {
+    margin: 0 0 10px;
+}
+
+ul.blog-list img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+ul.blog-list p {
+    margin: 10px 0;
+}
+
+ul.blog-list button {
+    margin-right: 10px;
+}
+
+
+ 
+.preserve-whitespace {
+  white-space: pre-wrap;
+}
+
+.content img {
+display: block;
+margin: 0 auto;
+max-width: 100%; /* Optional: ensure the image scales properly */
+height: auto;    /* Optional: maintain aspect ratio */
+border-radius: 0; 
+}
+
+
+
+.myTextarea {
+    min-height: 500px; /* Set your desired minimum height */
+    width: 100%;       /* Optional: Make the textarea full width */
+    box-sizing: border-box; /* Optional: Ensure padding is included in the width/height */
+}
