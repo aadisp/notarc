@@ -390,6 +390,10 @@
 }
 
 .team-item .btn {
+    border-radius: 5px 0px 0 0;
+}
+
+.justify-content-center .btn{
     border-radius: 38px 38px 0 0;
 }
 
