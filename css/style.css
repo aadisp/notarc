@@ -57,6 +57,20 @@
     text-transform: uppercase;
     transition: .5s;
 }
+.bttn{
+    transition: 0.5s;
+    border-radius: 2px;
+    padding: 0 5px 0 5px;
+    font-size: xx-large;
+    padding: 0 10px 0 10px;
+}
+.bttn:hover{
+    font-size: 50px;
+    padding: 0 0px 0 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    text-shadow: 0 0 10px rgb(255, 106, 0);
+}
 
 .btn.btn-primary,
 .btn.btn-secondary {
@@ -125,6 +139,14 @@
     position: absolute;
     top: 60px;
     left: 20px;
+}
+
+.scroll-container {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge */
+}
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
