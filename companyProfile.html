@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Company Profile</title>
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0; /* Remove default margin for body */
+                padding: 0; /* Remove default padding for body */
+                scroll-behavior: smooth;
+                background-color: rgb(37, 81, 81); overflow-y: scroll; /* enable scroll */
+                scrollbar-width: none;  /* Firefox */
+                -ms-overflow-style: none;  /* IE/Edge */
+            }
+            body::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, Opera */
+            }
+            .cmPrf{
+                display: grid;
+            }
+            
+            /*.cmPrf {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            overflow-y: hidden;
+            height: 100vh;
+            scroll-snap-type: x mandatory; /* snap effect /
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Firefox /
+            -ms-overflow-style: none; /* IE/Edge /
+        }
+        .cmPrf::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera /
+        }
+        .cmPrf > div {
+            flex: 0 0 100%; /* each section takes full viewport width /
+            height: 100vh;
+            scroll-snap-align: start;
+        }
+        .cmPrf img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }*/
+            
+            .scrl{
+                opacity: 0.5;
+                transition: 0.5s;
+            }
+            .scrl:hover{
+                opacity: 0.9;
+                width:180px;
+                height: auto;
+            }
+            .scrl:active{
+                opacity: 1;
+            }
+
+            .scroll-container {
+                display: flex;
+                overflow-x: auto;
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none;  /* IE/Edge */
+                justify-content: center;
+                align-items:center;
+                position: fixed;
+                padding: 10px;  
+                bottom: 0;
+                width: 100%;
+                opacity: 0;
+            }
+            .scroll-container::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, Opera */
+            }
+            .scroll-container img {
+                width: 80px;
+                height: auto;
+                border-radius: 6px;
+            }
+            .scroll-container a {
+                flex: 0 0 auto;
+                margin: 0 5px;
+            }
+            .crtin{
+                position: absolute;
+                background-color:black;
+                bottom: 0;
+                top: 0;
+                right: 0;
+                left: 0;
+            }
+            .shingping {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); /* shifts it back by half its size */
+                width: 300px;
+                height: 300px;
+                display: flex;              /* centers the image inside */
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+            }
+
+            .crtn {
+                 width: 90%;
+                 height: 90%;
+                 cursor: pointer;
+                 padding: 10px;
+
+                 /* fade + zoom when page loads */
+                 opacity: 0;
+                 transform: scale(0.8);
+                 animation: fadeZoomIn 1.2s ease-out forwards, gentlePulse 4s ease-in-out infinite;
+            }
+
+            /* smooth fade-in zoom */
+            @keyframes fadeZoomIn {
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            /* melodic pulsating "breathing" effect */
+            @keyframes gentlePulse {
+                0% {
+                    transform: scale(1);
+                    filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.5));
+                }
+                50% {
+                    transform: scale(1.05);
+                    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8));
+                }
+                100% {
+                    transform: scale(1);
+                    filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.5));
+                }
+            }
+
+
+            .pprwet{
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: blue;
+            }
+            .pprt{
+                width: 93px;
+                height: 93px;
+                position: fixed;
+                top: 5%;
+                left: 3.3%;
+                padding: 0px;
+                opacity: 0;
+            }
+            .wt{
+                width: 100%;
+                height: 100%;
+                padding: 10px;/* fade + zoom when page loads */
+                 opacity: 0;
+                 transform: scale(0.8);
+                 animation: fadeZoomIn 1.2s ease-out forwards, gentlePulse 4s ease-in-out infinite;
+            }
+
+            /* smooth fade-in zoom */
+            @keyframes fadeZoomIn {
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            /* melodic pulsating "breathing" effect */
+            @keyframes gentlePulse {
+                0% {
+                    transform: scale(1);
+                    filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.5));
+                }
+                50% {
+                    transform: scale(1.05);
+                    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8));
+                }
+                100% {
+                    transform: scale(1);
+                    filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.5));
+                }
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+        <div class="crtin" id="crtnImg">
+            <div class="shingping">
+                <img  src="img/firstLogoNotarc.png" onclick="goFullscreen(); curtainOpen()" class="crtn">
+            </div>
+        </div>
+        
+        <div class="pprwet" id="pprwt">
+            <div class="pprt" id="peprwt">
+                <a href="index.html"><img  src="img/firstLogoNotarc.png"  class="wt"></a>
+            </div>
+        </div>
+
+        <div class="cmPrf">
+            <div id="o"><img src="attachements/COMPANY PROFILE_page-0001.jpg" style="height: 100%; width: 100%;"></div>
+            <div id="t"><img src="attachements/COMPANY PROFILE_page-0002.jpg" style="height: 100%; width: 100%;"></div>
+            <div id="th"><img src="attachements/COMPANY PROFILE_page-0003.jpg" style="height: 100%; width: 100%;"></div>
+            <div id="f"><img src="attachements/COMPANY PROFILE_page-0004.jpg" style="height: 100%; width: 100%;"></div>
+            <div id="fi"><img src="attachements/COMPANY PROFILE_page-0005.jpg" style="height: 100%; width: 100%;"></div>
+            <div id="s"><img src="attachements/COMPANY PROFILE_page-0006.jpg" style="height: 100%; width: 100%;"></div>
+            <div id="se"><img src="attachements/COMPANY PROFILE_page-0007.jpg" style="height: 100%; width: 100%;"></div>
+            <div id="e"><img src="attachements/COMPANY PROFILE_page-0008.jpg" style="height: 100%; width: 100%;"></div>
+        </div>
+        
+        <div class="scroll-container" id="scrlr">
+            <a href="#o"><img class="scrl" src="attachements/COMPANY PROFILE_page-0001.jpg" style="display: inline-block;"></a>
+            <a href="#t"><img class="scrl" src="attachements/COMPANY PROFILE_page-0002.jpg" style="display: inline-block;"></a>
+            <a href="#th"><img class="scrl" src="attachements/COMPANY PROFILE_page-0003.jpg" style="display: inline-block;"></a>
+            <a href="#f"><img class="scrl" src="attachements/COMPANY PROFILE_page-0004.jpg" style="display: inline-block;"></a>
+            <a href="#fi"><img class="scrl" src="attachements/COMPANY PROFILE_page-0005.jpg" style="display: inline-block;"></a>
+            <a href="#s"><img class="scrl" src="attachements/COMPANY PROFILE_page-0006.jpg" style="display: inline-block;"></a>
+            <a href="#se"><img class="scrl" src="attachements/COMPANY PROFILE_page-0007.jpg" style="display: inline-block;"></a>
+            <a href="#e"><img class="scrl" src="attachements/COMPANY PROFILE_page-0008.jpg" style="display: inline-block;"></a>
+        </div>
+
+    </body>
+
+    <script>
+        function goFullscreen() {
+            let el = document.documentElement;
+            if (el.requestFullscreen) {
+            el.requestFullscreen();
+            } else if (el.webkitRequestFullscreen) { /* Safari */
+            el.webkitRequestFullscreen();
+            } else if (el.msRequestFullscreen) { /* IE11 */
+            el.msRequestFullscreen();
+            }
+        }
+    </script>
+
+    <script>
+        function curtainOpen() {
+            const ell= document.getElementById("crtnImg");
+            const elel= document.getElementById("scrlr");
+            const eel= document.getElementById("peprwt");
+            ell.style.display = "none";
+            elel.style.opacity = 1;
+            eel.style.opacity = 1;
+        }
+    </script>
+
+</html>
