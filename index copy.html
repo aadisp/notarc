@@ -33,12 +33,18 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 
  
 
 </head>
 
 <body>
+
+    
+        
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -52,9 +58,12 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0">NOTARC</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                <a href="index.html" class="navbar-brand navi p-0 nav-hvr-glow">
+                     <!--<h1 class="text-primary m-0"></h1>-->
+                    <img src="img/New folder/notarc logo.png" alt="Logo"> 
+                </a>
+                <a href=# class="navbar-brand p-0 nav-glow">
+                    <img src="img/New folder/file_00000000847c61f5a3291a478f65b272.png" alt="Logo"> 
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -85,8 +94,8 @@
                 <div class="container my-5 py-5">
                     <div class="row align-items-center g-5">
                         <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="display-3 text-white animated slideInLeft">Unleashing Innovation: <br>Drones, Robotics, and Beyond!</h1>
-                            <p class="text-white animated slideInLeft mb-4 pb-2">Innovating the Future with Drones, Robotics, and RC Solutions</p>
+                            <h1 class="display-3 text-white animated slideInLeft" style="font-family: League Spartan;">Unleashing Innovation: <br>Drones,<br>Robotics, and Beyond!</h1>
+                            <p class="text-white animated slideInLeft mb-4 pb-2" style="font-family: League Spartan;">Innovating the Future with Drones, Robotics, and RC Solutions</p>
                             <a href="#contact" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Contact Us</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
@@ -98,6 +107,67 @@
         </div>
         <!-- Navbar & Hero End -->
 
+<!--<div class="container-xxl position-relative p-0">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+
+    <!-- LOGO SECTION ->
+    <div class="navbar-brand p-0 d-flex align-items-center">
+      
+      <a href="#">
+        <img src="img/New folder/notarc logo.png" alt="Logo 2" class="navbr-logo">
+      </a>
+    </div>
+
+    <!-- TOGGLER BUTTON ->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="fa fa-bars"></span>
+    </button>
+
+    <!-- NAV LINKS ->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto py-0 pe-4">
+        <a href="index.html" class="nav-item nav-link active">Home</a>
+        <a href="#about" class="nav-item nav-link">About</a>
+        <a href="#service" class="nav-item nav-link">Service</a>
+        <a href="attachements/notarc Brochure.pdf" target="_blank" download="notarc Brochure" class="nav-item nav-link">Download Brochure</a>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+            <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+            <li><a class="dropdown-item" href="#team">Team</a></li>
+            <li><a class="dropdown-item" href="#company_Profile">View Company Profile</a></li>
+            <li><a class="dropdown-item" href="#Testimonial">Testimonial</a></li>
+          </ul>
+        </li>
+      </div>
+
+      <a href="#contact" class="btn btn-primary py-2 px-4">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION ->
+  <div class="container-xxl py-5 bg-dark hero-header mb-5">
+    <div class="container my-5 py-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 text-center text-lg-start">
+          <h1 class="display-3 text-white animated slideInLeft">
+            Unleashing Innovation: <br>Drones, Robotics, and Beyond!
+          </h1>
+          <p class="text-white animated slideInLeft mb-4 pb-2">
+            Innovating the Future with Drones, Robotics, and RC Solutions
+          </p>
+          <a href="#contact" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Contact Us</a>
+        </div>
+        <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+          <img class="img-fluid" src="img/pngwing.com.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
 
      
 
@@ -108,21 +178,51 @@
                 <div class="row g-5 align-itemss-center">
                     <div class="col-lg-6">
                         <div class="row g-3">
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/boxnota1.jpg">
+                            <div class="col-6 text-end" style="width:100%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/New folder/rec1.jpg">                             
                             </div>
-                            <div class="col-6 text-end">
+                            <div class="col-6 text-start plchldr" style="opacity: 0;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/New folder/rec1.jpg">                             
+                            </div>
+                            <div class="col-6 text-end" style="width:85%; display:flex; align-items: center;">
+                                <div style="position: absolute; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 100px 30px;">
+                                    <p class="mb-4">Join us on a journey where the sky is not the limit—it’s just the beginning.</p>
+                                    <div class="row g-4 mb-4">
+                                        <div class="col-sm-6">
+                                            <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                                                <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">1000</h1>
+                                                <div class="ps-4">
+                                                    <p class="mb-0">+Student</p>
+                                                    <h6 class="text-uppercase mb-0">Training Experience</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                                                <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">20</h1>
+                                                <div class="ps-4">
+                                                    <p class="mb-0">+AWARDS</p>
+                                                    <h6 class="text-uppercase mb-0">In Innovation</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/New folder/rec1.jpg" style="opacity: 0;"> 
+                            </div>
+                            
+                            <!--<div class="col-6 text-end">
                                 <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/about-1.png">
                             </div>
-                            <!--<div class="col-6 text-start">
+                            <div class="col-6 text-start">
                                 <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/boxNota2.jpg" style="margin-top: 25%;">
-                            </div>-->                            
+                            </div>                           
                             <div class="col-6 text-start">
                                 <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/gallery/35.png">
                             </div>
                             <div class="col-6 text-end">
                                 <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/sideprofile.jpg">
-                            </div>
+                            </div> -->
                             
                         </div>
                     </div>
@@ -132,9 +232,9 @@
                         <p class="mb-4"> NOTARC is a cutting-edge drone and robotics startup based in Bengaluru, Karnataka, dedicated to building the future of technology through innovation, education, and customization. We specialize in everything from custom-built drones to AI-integrated prototypes, offering powerful tech solutions for individuals, institutions, and industries.</p>
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">💡 Our Vision:</h5>
                         <p class="mb-4">To be India’s leading hub for drone innovation and practical tech education, empowering creators to imagine, build, and fly their future.</p>
-                        <p class="mb-4">Join us on a journey where the sky is not the limit—it’s just the beginning.</p>
+                        <!--<p class="mb-4" >Join us on a journey where the sky is not the limit—it’s just the beginning.</p>-->
                         
-                        <div class="row g-4 mb-4">
+                        <!--<div class="row g-4 mb-4">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
                                     <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">1000</h1>
@@ -153,7 +253,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         <a class="btn btn-primary py-3 px-5 mt-2" href="#contact">Contact Us</a>
                     </div>
                 </div>
@@ -273,6 +373,9 @@
             <a href="companyProfile.html"><img class="scrl" src="attachements/COMPANY PROFILE_page-0008.jpg" style="display: inline-block; width: 500px; height: auto; box-shadow: 0 0 10px rgba(0, 0, 0, .5); margin-right: 10px;object-fit: contain;"></a>
         </div>
   </div>
+   <div class="text-center mt-4">
+                <a href="companyProfile.html"><button id="loadMore" class="btn btn-primary bttn">&#x26F6;</button></a>
+            </div>
         </div>
     </div>
 
@@ -703,7 +806,7 @@
                             <h5 class="mb-0">Vikas P M</h5>
                             <small>Founder & CEO</small>
                             <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href="https://www.instagram.com/_notarc/?hl=en"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href="https://www.instagram.com/_notarc_/?hl=en"><i class="fab fa-instagram"></i></a>
                                 <a class="btn btn-square btn-primary mx-1" href="https://www.youtube.com/@NOTA.RC18"><i class="fab fa-youtube"></i></a>
                                 <a class="btn btn-square btn-primary mx-1" href="https://www.linkedin.com/in/notarc-93b690326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><i class="fab fa-linkedin-in"></i></a>
                             </div>
@@ -950,7 +1053,7 @@
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 79757 82830</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>nota.rc18@gmail.com</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/_notarc/?hl=en"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/_notarc_/?hl=en"><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@NOTA.RC18"><i class="fab fa-youtube"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/notarc-93b690326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><i class="fab fa-linkedin-in"></i></a>
                         </div>
@@ -986,7 +1089,7 @@
        <!-- Back to Top -->
     <a href="https://wa.me/+917975782830" class="back-to-top back-to-top1"><i class="fab fa-whatsapp"></i></a>
 
-    <a href="https://www.instagram.com/_notarc/?hl=en" class="back-to-top back-to-top2"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.instagram.com/_notarc_/?hl=en" class="back-to-top back-to-top2"><i class="fab fa-instagram"></i></a>
 
 
 
@@ -1138,7 +1241,33 @@ document.addEventListener("DOMContentLoaded", function() {
         showItems();
     });
 });
+
+
+
 </script>
+
+<!--<script>
+  const images = [
+    '../img/1.png',
+    '../img/2 comekares workshop.png',
+    '../img/GOPALAN.png',
+    '../img/GOV 7.png',
+    '../img/Malnad College of Engineering ADD 4.png',
+    '../img/PES 6.png',
+    '../img/SJCIT.png',
+    '../img/SKIT.png',
+    '../img/SKITBOOT.png'
+  ];
+
+  const hero = document.querySelector('.hero-header');
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    hero.style.backgroundImage = `linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, 0.519)), url(${images[index]})`;
+  }, 1500);
+</script>-->
+
 
 
     

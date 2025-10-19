@@ -118,7 +118,7 @@
 }
 
 .sticky-top.navbar-dark .navbar-nav .nav-link {
-    padding: 20px 0;
+    padding: auto 0;
 }
 
 .dropdown-item:hover,.dropdown-item:active{
@@ -182,6 +182,10 @@
     .navbar-dark .navbar-brand img {
         max-height: 45px;
     }
+
+    .plchldr{
+        width: 30%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -196,14 +200,20 @@
     
     .sticky-top.navbar-dark {
         position: fixed;
-        background: var(--dark) !important;
+        background var(--dark) !important;
+        background: rgb(39, 46, 64) !important;
+    }
+
+    .plchldr{
+        width:0%;
     }
 }
 
 
+
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, 0.519)), url(../img/sky.jpg);
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, 0.519)), url(../img/1.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -737,3 +747,66 @@
     object-fit: cover; /* Ensures the video covers the entire container */
   }
   
+
+  @keyframes changeBackground {
+  0%   { background-image: linear-gradient(rgba(39, 46, 64, .9), rgba(39, 46, 64, 0.519)), url(../img/1.png); }
+  11.11% { background-image: linear-gradient(rgba(39, 46, 64, .9), rgba(39, 46, 64, 0.519)), url(../img/2.png); }
+  22.22% { background-image: linear-gradient(rgba(39, 46, 64, .9), rgba(39, 46, 64, 0.519)), url(../img/GOPALAN.png); }
+  33.33% { background-image: linear-gradient(rgba(39, 46, 64, .9), rgba(39, 46, 64, 0.519)), url(../img/GOV7.png); }
+  44.44% { background-image: linear-gradient(rgba(39, 46, 64, .9), rgba(39, 46, 64, 0.519)), url(../img/Malnad.png); }
+  55.55% { background-image: linear-gradient(rgba(39, 46, 64, .9), rgba(39, 46, 64, 0.519)), url(../img/PES6.png); }
+  66.66% { background-image: linear-gradient(rgba(39, 46, 64, .9), rgba(39, 46, 64, 0.519)), url(../img/SJCIT.png); }
+  77.77% { background-image: linear-gradient(rgba(39, 46, 64, .9), rgba(39, 46, 64, 0.519)), url(../img/SKIT.png); }
+  88.88% { background-image: linear-gradient(rgba(39, 46, 64, .9), rgba(39, 46, 64, 0.519)), url(../img/SKITBOOT.png); }
+  100% { background-image: linear-gradient(rgba(39, 46, 64, .9), rgba(39, 46, 64, 0.519)), url(../img/1.png); }
+}
+
+.hero-header {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: changeBackground 60s infinite; /* 5s per image */
+}
+
+
+.navbar{
+    background rgba(15, 23, 43, .9) !important;
+    background rgba(16, 24, 44,0) !important;
+    background: rgb(39, 46, 64) !important;
+}
+
+.nav-glow img {
+    height: 60px;
+    animation: logoGlow 2.5s infinite alternate;
+}
+
+@keyframes logoGlow {
+    0% {
+        filter: drop-shadow(0 0 4px rgba(0, 255, 64, 0.5));
+    }
+    100% {
+        filter: drop-shadow(0 0 8px rgb(0, 255, 64));
+    }
+}
+
+.navbar-brand img {
+    height: 60px; /* adjust if needed */
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+/* Glow on hover */
+.navbar-brand img:hover {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9));
+    transform: scale(1.05); /* optional: slight zoom-in for a dynamic feel */
+}
+
+.navi{
+    filter: drop-shadow(0 0 2.5px rgba(255, 255, 255, 0.5));
+}
+
+.abt{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2884c1;
+}
