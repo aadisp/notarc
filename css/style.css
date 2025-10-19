@@ -164,8 +164,16 @@
 }
 
 @media (max-width: 991.98px) {
+    .navbar-dark {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background: transparent !important;
+    }
     .sticky-top.navbar-dark {
-        position: relative;
+        position: fixed;
     }
 
     .navbar-dark .navbar-collapse {
@@ -809,4 +817,9 @@
     align-items: center;
     flex-direction: column;
     background-color: #2884c1;
+}
+
+.rec1img{
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+    cursor: pointer;
 }
