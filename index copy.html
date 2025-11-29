@@ -42,6 +42,58 @@
         .smllr{
             font-size: 12px;
         }
+      .logo-slider {
+        width: 100%;
+        overflow: hidden;
+        background: transparent;
+        padding: 20px 0;
+      }
+
+      .logo-track {
+        display: flex;
+        width: max-content;
+        animation: scroll-right 40s linear infinite;
+      }
+
+      .logo-track img {
+        height: 40px;   /* ✅ EXACT SIZE YOU ASKED */
+        width: auto;
+        margin: 0 25px;
+        object-fit: contain;
+        opacity: 0.8;
+        transition: 0.3s ease;
+      }
+
+      .logo-track img:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+
+      /* ✅ TRUE INFINITE LEFT → RIGHT */
+      @keyframes scroll-right {
+        0% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .logo-slider:hover .logo-track {
+        animation-play-state: paused;
+      }
+
+      .logo-slider {
+        mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 15%,
+        black 85%,
+        transparent
+       );
+       }
+
+
     </style>
 
 </head>
@@ -950,7 +1002,57 @@
         <!-- Reservation Start -->
 
 
+<div class="container-xxl py-5" id="products">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h5 class="section-title ff-secondary text-center text-primary fw-normal">Happy Clients</h5>
+      <!--<h1 class="mb-5">Honored to have worked with</h1>-->
+    </div>
+    <div class="row g-4" style="justify-content: center; font-size: xx-large;font-weight: 900;color: rgb(80, 80, 80);padding-left: 75px;padding-right: 75px;">
+      <section class="logo-slider">
+      <div class="logo-track">
+        
+        <!-- ORIGINAL 10 LOGOS -->
+        <a href="https://comedkares.org/" target="_blank"><img src="img/happy clients/Comedkares-Logo-EPS.png"></a>
+        <a href="https://sjcit.ac.in/" target="_blank"><img src="img/happy clients/hhhhhhhhhhhhhhhhhhhhhhhhhh (1).png"></a>
+        <a href="https://www.mcehassan.ac.in/home/MERIIISE" target="_blank"><img src="img/happy clients/Image_1292EDB5_5641_F2C1_41BA_B225C09396B4_en.png"></a>
+        <a href="https://inunity.in/" target="_blank"><img src="img/happy clients/inunity-logo-black-png.png"></a>
+        <a href="https://poornaprajna.ac.in/" target="_blank"><img src="img/happy clients/logo.png"></a>
+        <a href="https://www.mcehassan.ac.in/home/MERIIISE" target="_blank"><img src="img/happy clients/meriiseNewLogo.png"></a>
+        <a href="https://pesce.ac.in/" target="_blank"><img src="img/happy clients/peslogo.png"></a>
+        <a href="https://www.rrce.org/" target="_blank"><img src="img/happy clients/rrce-logo.png"></a>
+        <a href="https://www.skit.org.in/" target="_blank"><img src="img/happy clients/skit logooo (2).png"></a>
+        <img src="img/happy clients/thomassholl.png">
 
+        <!-- DUPLICATE SAME 10 FOR PERFECT LOOP -->
+        <a href="https://comedkares.org/" target="_blank"><img src="img/happy clients/Comedkares-Logo-EPS.png"></a>
+        <a href="https://sjcit.ac.in/" target="_blank"><img src="img/happy clients/hhhhhhhhhhhhhhhhhhhhhhhhhh (1).png"></a>
+        <a href="https://www.mcehassan.ac.in/home/MERIIISE" target="_blank"><img src="img/happy clients/Image_1292EDB5_5641_F2C1_41BA_B225C09396B4_en.png"></a>
+        <a href="https://inunity.in/" target="_blank"><img src="img/happy clients/inunity-logo-black-png.png"></a>
+        <a href="https://poornaprajna.ac.in/" target="_blank"><img src="img/happy clients/logo.png"></a>
+        <a href="https://www.mcehassan.ac.in/home/MERIIISE" target="_blank"><img src="img/happy clients/meriiseNewLogo.png"></a>
+        <a href="https://pesce.ac.in/" target="_blank"><img src="img/happy clients/peslogo.png"></a>
+        <a href="https://www.rrce.org/" target="_blank"><img src="img/happy clients/rrce-logo.png"></a>
+        <a href="https://www.skit.org.in/" target="_blank"><img src="img/happy clients/skit logooo (2).png"></a>
+        <img src="img/happy clients/thomassholl.png">
+
+        <!-- DUPLICATE SAME 10 FOR PERFECT LOOP -->
+        <a href="https://comedkares.org/" target="_blank"><img src="img/happy clients/Comedkares-Logo-EPS.png"></a>
+        <a href="https://sjcit.ac.in/" target="_blank"><img src="img/happy clients/hhhhhhhhhhhhhhhhhhhhhhhhhh (1).png"></a>
+        <a href="https://www.mcehassan.ac.in/home/MERIIISE" target="_blank"><img src="img/happy clients/Image_1292EDB5_5641_F2C1_41BA_B225C09396B4_en.png"></a>
+        <a href="https://inunity.in/" target="_blank"><img src="img/happy clients/inunity-logo-black-png.png"></a>
+        <a href="https://poornaprajna.ac.in/" target="_blank"><img src="img/happy clients/logo.png"></a>
+        <a href="https://www.mcehassan.ac.in/home/MERIIISE" target="_blank"><img src="img/happy clients/meriiseNewLogo.png"></a>
+        <a href="https://pesce.ac.in/" target="_blank"><img src="img/happy clients/peslogo.png"></a>
+        <a href="https://www.rrce.org/" target="_blank"><img src="img/happy clients/rrce-logo.png"></a>
+        <a href="https://www.skit.org.in/" target="_blank"><img src="img/happy clients/skit logooo (2).png"></a>
+        <img src="img/happy clients/thomassholl.png">
+
+      </div>
+    </section>
+    </div>
+  </div>
+</div>
 
 
          <!-- testinmonial from google reviews---------->

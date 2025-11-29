@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .logo-slider {
+        width: 100%;
+        overflow: hidden;
+        background: transparent;
+        padding: 20px 0;
+      }
+
+      .logo-track {
+        display: flex;
+        width: max-content;
+        animation: scroll-right 40s linear infinite;
+      }
+
+      .logo-track img {
+        height: 40px;   /* ✅ EXACT SIZE YOU ASKED */
+        width: auto;
+        margin: 0 25px;
+        object-fit: contain;
+        opacity: 0.8;
+        transition: 0.3s ease;
+      }
+
+      .logo-track img:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+
+      /* ✅ TRUE INFINITE LEFT → RIGHT */
+      @keyframes scroll-right {
+        0% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .logo-slider:hover .logo-track {
+        animation-play-state: paused;
+      }
+
+    </style>
+  </head>
+  <body>
+    <section class="logo-slider">
+      <div class="logo-track">
+        
+        <!-- ORIGINAL 10 LOGOS -->
+        <img src="img/happy clients/Comedkares-Logo-EPS.png">
+        <img src="img/happy clients/hhhhhhhhhhhhhhhhhhhhhhhhhh (1).png">
+        <img src="img/happy clients/Image_1292EDB5_5641_F2C1_41BA_B225C09396B4_en.png">
+        <img src="img/happy clients/inunity-logo-black-png.png">
+        <img src="img/happy clients/logo.png">
+        <img src="img/happy clients/meriiseNewLogo.png">
+        <img src="img/happy clients/peslogo.png">
+        <img src="img/happy clients/rrce-logo.png">
+        <img src="img/happy clients/skit logooo (2).png">
+        <img src="img/happy clients/thomassholl.png">
+
+        <!-- DUPLICATE SAME 10 FOR PERFECT LOOP -->
+        <img src="img/happy clients/Comedkares-Logo-EPS.png">
+        <img src="img/happy clients/hhhhhhhhhhhhhhhhhhhhhhhhhh (1).png">
+        <img src="img/happy clients/Image_1292EDB5_5641_F2C1_41BA_B225C09396B4_en.png">
+        <img src="img/happy clients/inunity-logo-black-png.png">
+        <img src="img/happy clients/logo.png">
+        <img src="img/happy clients/meriiseNewLogo.png">
+        <img src="img/happy clients/peslogo.png">
+        <img src="img/happy clients/rrce-logo.png">
+        <img src="img/happy clients/skit logooo (2).png">
+        <img src="img/happy clients/thomassholl.png">
+
+        <!-- DUPLICATE SAME 10 FOR PERFECT LOOP -->
+        <img src="img/happy clients/Comedkares-Logo-EPS.png">
+        <img src="img/happy clients/hhhhhhhhhhhhhhhhhhhhhhhhhh (1).png">
+        <img src="img/happy clients/Image_1292EDB5_5641_F2C1_41BA_B225C09396B4_en.png">
+        <img src="img/happy clients/inunity-logo-black-png.png">
+        <img src="img/happy clients/logo.png">
+        <img src="img/happy clients/meriiseNewLogo.png">
+        <img src="img/happy clients/peslogo.png">
+        <img src="img/happy clients/rrce-logo.png">
+        <img src="img/happy clients/skit logooo (2).png">
+        <img src="img/happy clients/thomassholl.png">
+
+      </div>
+    </section>
+
+
+  </body>
+</html>
