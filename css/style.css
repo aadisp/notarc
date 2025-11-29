@@ -194,6 +194,13 @@
     .plchldr{
         width: 30%;
     }
+
+    .navimns{
+        display:block;
+    }
+    .navipls{
+        display:none;
+    }
 }
 
 @media (min-width: 992px) {
@@ -214,6 +221,13 @@
 
     .plchldr{
         width:0%;
+    }
+
+    .navipls{
+        display: none;
+    }
+    .navimns{
+        display none;
     }
 }
 

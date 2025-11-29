@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up - notarc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+      button{
+        cursor: pointer;
+      }
+      body{
+        background-image: url(img/clds.png);
+        font-family: League Spartan;
+      }
+      .one{
+        position:fixed;
+        left: 50%;
+        right: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        min-width: fit-content;
+        border-radius: 8px;
+        background: linear-gradient(to bottom, rgba(135, 206, 235,0.7), rgba(255, 255, 255,0.7));
+        background linear-gradient(to bottom, rgb(0, 5, 18), rgb(4, 11, 21), rgb(9, 24, 39), rgb(12, 28, 43));
+        justify-items: center;
+        line-height: 25px;
+      }
+      .fourd,.sevend,.eightd,.nined{
+        display: flex;
+      }
+      .oned{
+        justify-items: center;
+      }
+      .lginimg{
+        width: 30px;
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        filter invert(100%);
+      }
+      .ml,.lck{
+        width: 25px;
+        height: auto;
+        padding-top: 5px;
+        padding-right: 5px;
+        filter invert(100%);
+      }
+      .ggl{
+        width: 50px;
+        height: auto;
+        padding-left: 5px;
+        vertical-align: middle;
+        cursor: pointer;
+        filter: grayscale(0%);
+        transition: 0.3s ease;
+      }
+      .ggl:hover{
+        animation: grayFlash 3s ease-in-out infinite;
+      }
+      @keyframes grayFlash {
+        0% {
+          filter: grayscale(0%);
+        }
+        50% {
+          filter: grayscale(100%);
+        }
+        100% {
+          filter: grayscale(0%);
+        }
+      }
+      .ggl:active{
+        transition: none;
+        opacity: 0.5;
+      }
+      .threed,.fourd{
+        align-items: center;
+      }
+      .loggoo{
+        background-color brown;
+        position: absolute;
+        top: 180px;
+        left: 580px;
+        justify-self: center;
+        z-index: 10;
+      }
+      .looggo{
+        width: 100px;
+        height: auto;
+        animation: imgMotion 10s ease-in-out infinite;
+      }
+
+      @keyframes imgMotion {
+          0% {
+              transform: translateX(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+          }
+          25% {
+              transform: translateX(-20px) rotate(0deg); /* Move right */
+              transform: translateY(-20px) rotate(0deg);
+          }
+          50% {
+              transform: translateX(35px) rotate(0deg); /* Move left */
+              transform: translateY(35px) rotate(0deg);
+          }
+          75% {
+              transform: translateX(0) rotate(0deg); /* Circular motion (backflip) */
+              transform: translateY(0) rotate(0deg);
+          }
+          100% {
+              transform: translateX(0) rotate(720deg); /* Continue circular motion */
+              transform: translateY(0) rotate(720deg);
+          }
+      }
+      .pprwt{
+        background-color brown;
+        position: fixed;
+        top: 10px;
+        left: 30px;
+        right: 30px;
+        justify-self: center;
+        z-index: 10;
+        filter invert(100%);
+      }
+      .pwt{
+        width: 100px;
+        height: auto;
+      }
+      .twod{
+        font-size: large;
+        color: white;
+        text-shadow: 0 0 5px rgba(255,255,255,1);
+        padding-bottom: 20px;
+      }
+      .twoddml,.twoddpswd{
+        border: none;
+        border-radius: 4px;
+        padding: 8px 10px 8px 10px;
+        background-color rgba(0, 0, 0, 0.5);
+        background-color: rgba(156, 219, 252, 0.5);
+      }
+      .threeddeye{
+        width: 15px;
+        height: auto;
+        filter invert(100%);
+      }
+      .threeddbtn{
+        border: none;
+        background-color: rgba(0,0,0,0);
+      }
+      .sixdlgin{
+        border: none;
+        padding: 10px 50px 10px 50px;
+        font-size: 12px;
+        border-radius: 4px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        text-shadow 0 0 8px rgb(0, 0, 0);
+        text-shadow: 0 0 8px rgb(255, 255, 255);
+        transition: 0.5s ease;
+      }
+      .sixdlgin:hover{
+        background-color:white;
+        color rgb(0, 0, 0);
+        color: rgb(68, 68, 68);
+      }
+      .threefourd{
+        align-items: center;
+        padding-left: 5px;
+        margin-bottom: 35px;
+      }
+      .twoddml::placeholder,.twoddpswd::placeholder{
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+      .fivedfrgt{
+        border: none;
+        background-color: rgba(0,0,0,0);
+        font-size: x-small;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      .fived{
+        padding-bottom: 15px;
+        margin-top -5px;
+      }
+      .sixd{
+        padding-bottom: 0px;
+        filter invert(100%);
+      }
+      /**.sevend{
+        filter: invert(100%);
+      }**/
+      .eightd{
+        padding-bottom: 10px;
+      }
+      /**.eonedd,.nonedd{
+        filter: invert(100%);
+      }**/
+      .ntwodd{
+        padding-left: 10px;
+        filter invert(100%);
+      }
+      .ntwoddsnup{
+        border: none;
+        padding: 5px 10px 5px 10px;
+        font-size: x-small;
+        border-radius: 4px;
+        background-color: rgb(252, 252, 252);
+        color: rgb(0, 0, 0);
+        text-shadow 0 0 8px rgb(0, 0, 0);
+        text-shadow: 0 0 8px rgb(255, 255, 255);
+        transition: 0.3s;
+      }
+      .ntwoddsnup:hover{
+        background-color:rgb(0, 0, 0);
+        color rgb(203, 203, 203);
+        color: rgb(255, 255, 255);
+      }
+      .twoddml:focus,.twoddpswd:focus{
+        outline: none;
+        color rgb(220, 220, 220);
+        color:rgb(36, 36, 36);
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+      .twoddml,.twoddpswd{
+        color rgb(195, 195, 195);
+        color: rgb(68, 68, 68);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--<h2>Login / Signup</h2>
+
+    <input id="email" type="email" placeholder="Enter Email">
+    <input id="password" type="password" placeholder="Enter Password">
+
+    <button onclick="signupUser()">Signup</button>
+    <button onclick="loginUser()">Login</button>
+
+    <button onclick="googleLogin()">Login with Google</button>-->
+
+    <!--<div class="loggoo">
+      <a href="index.html" class="loggo">
+          <img class="looggo" src="img/New folder/Logontrc.png" alt="Logo"> 
+      </a>
+    </div>-->
+
+    <div class="pprwt">
+      <a href="index.html" class="ppwt">
+          <img class="pwt" src="img/New folder/notarc logo.png" alt="Logo"> 
+      </a>
+    </div>
+
+    <div class="one">
+      <div class="oned" style="background-color lightgoldenrodyellow;"><div><img class="lginimg" src="img/download.png"></div></div>
+      <div class="twod" style="background-color thistle">Sign Up using email</div>
+      <div class="threefourd">
+        <div class="threed" style="background-color silver;display: flex;">
+          <div class="tonedd" style="background-color rebeccapurple;"><img class="ml" src="img/mll.png"></div>
+          <div class="ttwodd" style="background-color red;"><input class="twoddml" type="email" placeholder="Email" id="email"></div>
+        </div>
+        <div class="fourd" style="background-color paleturquoise;">
+          <div class="fonedd" style="background-color rebeccapurple;"><img class="lck" src="img/lck.png"></div>
+          <div class="ftwodd" style="background-color tan;"><input id="password" class="twoddpswd" type="password" placeholder="Password"></div>
+          <div class="fthreedd" style="background-color rebeccapurple;"><button class="threeddbtn" onclick="togglePassword()"><img class="threeddeye" src="img/closed-eye.png" onclick="toggleImage()" id="eyeIcon"></button></div>
+        </div>
+      </div>
+      <div class="sixd" style="background-color powderblue;"><button class="sixdlgin" onclick="signupUser()">Sign Up</button></div>
+      <div class="sevend" style="background-color linen;">
+        <div class="sonedd" style="background-color lightgreen;">-----</div>
+        <div class="stwodd" style="background-color orange;">or</div>
+        <div class="sthreedd" style="background-color lightgreen;">-----</div>
+      </div>
+      <div class="eightd" style="background-color rgb(254, 8, 4);">
+        <div class="eonedd"style="background-color olive;">Login using</div>
+        <div class="etwodd" style="background-color goldenrod;"><img class="ggl" src="img/ggl.png" onclick="googleLogin()"></div>
+      </div>
+      <div class="nined" style="background-color antiquewhite;">
+        <div class="nonedd" style="background-color crimson;">Already own an account?</div>
+        <div class="ntwodd" style="background-color silver;"><a href="login.html"><button class="ntwoddsnup">Log In</button></a></div>
+      </div>
+    </div>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+      import { 
+        getAuth, 
+        createUserWithEmailAndPassword, 
+        signInWithEmailAndPassword,
+        signInWithPopup,
+        GoogleAuthProvider
+      } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAx1vpBGEKGcKHMnSQuAfBxH-NeiF9BUM8",
+        authDomain: "notarc-1a2ae.firebaseapp.com",
+        projectId: "notarc-1a2ae",
+        storageBucket: "notarc-1a2ae.firebasestorage.app",
+        messagingSenderId: "135940483875",
+        appId: "1:135940483875:web:de38bf9d7984083954ba96"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const provider = new GoogleAuthProvider();
+
+      // Signup Function
+      window.signupUser = async () => {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        try {
+          await createUserWithEmailAndPassword(auth, email, password);
+          /**window.location.href = "dashboard.html";**/
+          localStorage.setItem("hasLoggedInBefore", "true");
+          window.location.href = "index.html";
+        } catch (err) {
+          alert(err.message);
+        }
+      }
+
+      // Login Function
+      window.loginUser = async () => {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        try {
+          await signInWithEmailAndPassword(auth, email, password);
+          /**window.location.href = "dashboard.html";**/
+          localStorage.setItem("hasLoggedInBefore", "true");
+          window.location.href = "index.html";
+        } catch (err) {
+          alert(err.message);
+        }
+      }
+
+      // Google Login Function
+      window.googleLogin = async () => {
+        try {
+          await signInWithPopup(auth, provider);
+          /**window.location.href = "dashboard.html";**/
+          localStorage.setItem("hasLoggedInBefore", "true");
+          window.location.href = "index.html";
+        } catch (err) {
+          alert(err.message);
+        }
+      }
+    </script>
+
+    <script>
+      function togglePassword() {
+        const passwordField = document.getElementById("password");
+
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+        } else {
+          passwordField.type = "password";
+        }
+      }
+
+      function toggleImage() {
+        const img = document.getElementById("eyeIcon");
+
+        if (img.src.includes("img/closed-eye.png")) {
+          img.src = "img/open-eye.png";
+        } else {
+          img.src = "img/closed-eye.png";
+        }
+      }
+    </script>
+
+  </body>
+</html>
