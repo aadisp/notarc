@@ -92,6 +92,42 @@
         transparent
        );
        }
+       
+            .crtin{
+                position: fixed;
+                background: linear-gradient(to left,rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5));
+                bottom: 0;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 1000000;
+                cursor: pointer;
+            }
+            .shingping {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); /* shifts it back by half its size */
+                width: fit-content;
+                display: flex;              /* centers the image inside */
+                justify-content: center;
+                align-items: center;
+                padding: 100px;
+            }
+
+            .crtn {
+                 width: 100%;
+                 height: 100%;
+            }
+
+    
+            @media (max-width: 991.98px){
+                .crtn{
+                width: 300px;
+                height: auto;
+                margin-right: 33px;
+            }
+        }
 
 
     </style>
@@ -100,7 +136,20 @@
 
 <body>
 
-    
+        <div class="crtin" id="crtnImg">
+            <div class="shingping">
+                <a href="img/poster.png" download="Notarc Internship">
+                    <img  src="img/poster.png" onclick="curtainOpen()" class="crtn">
+                </a>
+            </div>
+        </div>    
+
+        <script>
+        function curtainOpen() {
+            const ell= document.getElementById("crtnImg");
+            ell.style.display = "none";
+        }
+    </script>
         
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
