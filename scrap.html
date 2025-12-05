@@ -1,93 +1,120 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <style>
-      .logo-slider {
-        width: 100%;
-        overflow: hidden;
-        background: transparent;
-        padding: 20px 0;
-      }
+        .crtin{
+                position: fixed;
+                background: linear-gradient(to left,rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2));
+                bottom: 0;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 1000000;
+                cursor: pointer;
+            }
+            .shingping {
+                position: fixed;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -40%); /* shifts it back by half its size */
+                width: fit-content;
+                display: flex;              /* centers the image inside */
+                justify-content: center;
+                align-items: center;
+                padding: 100px;
+            }
 
-      .logo-track {
-        display: flex;
-        width: max-content;
-        animation: scroll-right 40s linear infinite;
-      }
+            
+            .shingpping {
+                position: fixed;
+                top: 2%;
+                left: 50%;
+                right:20px;
+                transform: (-50%,-2%);
+                width: fit-content;
+                display: flex;              /* centers the image inside */
+                justify-content: end;
+            }
 
-      .logo-track img {
-        height: 40px;   /* ✅ EXACT SIZE YOU ASKED */
-        width: auto;
-        margin: 0 25px;
-        object-fit: contain;
-        opacity: 0.8;
-        transition: 0.3s ease;
-      }
-
-      .logo-track img:hover {
-        opacity: 1;
-        transform: scale(1.1);
-      }
-
-      /* ✅ TRUE INFINITE LEFT → RIGHT */
-      @keyframes scroll-right {
-        0% {
-          transform: translateX(-50%);
+            .crtn {
+                 width: 100%;
+                 height: 100%;
+            }
+            .crttn {
+                 width: 3%;
+                 height: 3%;
+            }
+    
+            @media (max-width: 991.98px){
+                .crtn{
+                width: 300px;
+                height: auto;
+                margin-right: 33px;
+            }
+            .crttn {
+                width: 20px;
+                height: auto;
+            }
         }
-        100% {
-          transform: translateX(0);
-        }
-      }
 
-      .logo-slider:hover .logo-track {
-        animation-play-state: paused;
-      }
 
     </style>
-  </head>
-  <body>
-    <section class="logo-slider">
-      <div class="logo-track">
-        
-        <!-- ORIGINAL 10 LOGOS -->
-        <img src="img/happy clients/Comedkares-Logo-EPS.png">
-        <img src="img/happy clients/hhhhhhhhhhhhhhhhhhhhhhhhhh (1).png">
-        <img src="img/happy clients/Image_1292EDB5_5641_F2C1_41BA_B225C09396B4_en.png">
-        <img src="img/happy clients/inunity-logo-black-png.png">
-        <img src="img/happy clients/logo.png">
-        <img src="img/happy clients/meriiseNewLogo.png">
-        <img src="img/happy clients/peslogo.png">
-        <img src="img/happy clients/rrce-logo.png">
-        <img src="img/happy clients/skit logooo (2).png">
-        <img src="img/happy clients/thomassholl.png">
-
-        <!-- DUPLICATE SAME 10 FOR PERFECT LOOP -->
-        <img src="img/happy clients/Comedkares-Logo-EPS.png">
-        <img src="img/happy clients/hhhhhhhhhhhhhhhhhhhhhhhhhh (1).png">
-        <img src="img/happy clients/Image_1292EDB5_5641_F2C1_41BA_B225C09396B4_en.png">
-        <img src="img/happy clients/inunity-logo-black-png.png">
-        <img src="img/happy clients/logo.png">
-        <img src="img/happy clients/meriiseNewLogo.png">
-        <img src="img/happy clients/peslogo.png">
-        <img src="img/happy clients/rrce-logo.png">
-        <img src="img/happy clients/skit logooo (2).png">
-        <img src="img/happy clients/thomassholl.png">
-
-        <!-- DUPLICATE SAME 10 FOR PERFECT LOOP -->
-        <img src="img/happy clients/Comedkares-Logo-EPS.png">
-        <img src="img/happy clients/hhhhhhhhhhhhhhhhhhhhhhhhhh (1).png">
-        <img src="img/happy clients/Image_1292EDB5_5641_F2C1_41BA_B225C09396B4_en.png">
-        <img src="img/happy clients/inunity-logo-black-png.png">
-        <img src="img/happy clients/logo.png">
-        <img src="img/happy clients/meriiseNewLogo.png">
-        <img src="img/happy clients/peslogo.png">
-        <img src="img/happy clients/rrce-logo.png">
-        <img src="img/happy clients/skit logooo (2).png">
-        <img src="img/happy clients/thomassholl.png">
-
-      </div>
-    </section>
 
 
+    <style>
+      .imig1{
+        width: 600px;
+      }
+      .imig2{
+        width: 30px;
+        cursor: pointer;
+      }
+      @media (max-width: 991.98px){
+        #adwall{
+          margin-top: 150px;
+        }
+                .imig1{
+                  width: 300px;
+            }
+          
+            .imig2 {
+              width: 20px;
+              padding-left: 5px;
+            }
+          }
+    </style>
+</head>
+
+<body>
+
+        <!--<div class="crtin" id="crtnImg">
+            <div class="shingping">
+                <a href="img/poster.png" download="Notarc Internship">
+                    <img  src="img/poster.png" onclick="curtainOpen()" class="crtn">
+                </a>
+            </div>
+            <div class="shingpping">
+                    <img  src="img/cncl.png" onclick="curtainOpen()" class="crttn">
+            </div>
+        </div>  -->  
+
+        <div style="display: flex; justify-content: center;" id="adwall">
+          <div>
+            <a href="img/poster.png" download="Notarc Internship">
+                    <img  src="img/poster.png" onclick="curtainOpen()" class="imig1">
+                </a>
+          </div>
+          <div>
+            <img  src="img/cncl.png" onclick="curtainOpen()" class="imig2">
+          </div>
+        </div>
+
+        <script>
+        function curtainOpen() {
+            const ell= document.getElementById("adwall");
+            ell.style.display = "none";
+        }
+    </script>
   </body>
 </html>
