@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Page-Dashboard</title>
+    <link href="testpage.css" rel="stylesheet">
+    <link href="buysheetdb.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <header>
+      <div class="header-logo">
+        <img class="header-logo-img" src="img/ntrclogo.png">
+      </div>
+      <div class="header-logout">
+        <button class="header-logout-btn">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-left-side">
+        <div class="main-profile">
+          <div class="main-profile-pic"></div>
+          <div class="main-profile-name">
+            <p class="main-profile-name-ptag">Profile Name</p>
+          </div>
+        </div>
+        <div class="main-side-tab">
+          <div class="main-orders">
+            <p class="main-orders-ptag">Orders</p>
+          </div>
+        </div>
+      </div>
+      <div class="main-right-side">
+        <div class="checkout">
+          <button class="checkout-btn">Checkout</button>
+        </div>
+        <div class="buypad">
+        
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdctimg.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER</div>
+            <div class="prdctkit">F450 Arduino-Assembled Kit</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹14,999</div>
+              <div class="prdctqnt js-prdctqnt">1</div>
+              <div class="prdctcart">
+                <button class="prdctcartbtn" onclick="Cartplus()">+</button>
+                <button class="prdctcartbtn" onclick="Cartminus()">-</button>
+              </div>
+            </div>
+              <div class="prdctfate">
+                <button class="prdctdelbtn" onclick="CartDel()">Delete</button>
+                <button class="prdctbuybtn" onclick="CartBuy()">Buy</button>
+              </div>
+          </div>
+          
+          <!--<div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct2.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Arduino Based-only kit</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹12,999</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct3.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">K K board-Assembled</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹16,999</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct3.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">K K board-only kit</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹14,999</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>-->
+        </div>
+      </div>
+      <!--<div class="empty-right-side">
+        <p>Nothing in cart yet</p>
+        <div>
+          <button class="browse-btn">Browse</button>
+        </div>
+      </div>-->
+    </main>
+
+    <footer>
+
+      <div class="footer-company">
+        <h4 >Company</h4>
+        <a  href="#about">About Us</a>
+        <a  href="#contact">Contact Us</a>
+        <a  href="#service">Services</a>
+        <a  href="creategallery.html">GalleryCreate</a>
+        <a  href="#gallery">Gallery</a>
+        <a  href="#team">Team</a>
+      </div>
+      <div class="footer-contact">
+        <h4 >Contact</h4>
+        <p ><i ></i> 57, Chimney Hills Bangalore Hesaraghatta Main Road, Post, Chikkabanavara, Bengaluru, Karnataka 560090</p>
+        <p ><i ></i>+91 79757 82830</p>
+        <p ><i ></i>nota.rc18@gmail.com</p>
+            <a  href="https://www.instagram.com/_notarc_/?hl=en"><i ></i></a>
+            <a  href="https://www.youtube.com/@NOTA.RC18"><i ></i></a>
+            <a  href="https://www.linkedin.com/in/notarc-93b690326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><i ></i></a>
+      </div>
+      <div class="footer-opening">
+        <h4 >Opening</h4>
+        <h5 >Monday - Saturday</h5>
+        <p>09AM - 09PM</p>
+        <h5 >Sunday</h5>
+        <p>10AM - 08PM</p>
+        <a href="https://notarc.in">NOTARC</a>, All Right Reserved. 
+      </div>
+    </footer>
+
+    
+    <script src="testpage.js"></script>
+  </body>
+</html>

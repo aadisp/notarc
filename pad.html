@@ -1,0 +1,163 @@
+    <div style="margin-bottom: 20px;">
+
+    <button onclick="crtqnt()">
+      Show Quantity
+    </button>
+
+    <button class="js-adc" onclick="crt('1')">
+        Add to Cart
+    </button>
+
+    <button onclick="crt('2')">
+        +2
+    </button>
+
+    <button onclick="crt('R') ">
+        Remove from cart
+    </button>
+
+    <button onclick="crt('-2')">
+        -2
+    </button>
+
+    <button onclick="crt('-3')">
+        -3
+    </button>
+
+    <p class="js-cart">
+    </p>
+
+    </div>
+    <script>
+     
+      let nine;
+      let one;
+      let two;
+
+
+      let cartlog=JSON.parse(localStorage.getItem('crtlog'))||{qnt:0}
+
+      function crtqnt(){
+        document.querySelector('.js-cart').innerHTML=`Cart Quantity: ${cartlog.qnt}`
+        cartlog.qnt!=0?adc('+1'):adc('Add to Cart');
+      }
+      crtqnt()
+      function adc(tag){
+        document.querySelector('.js-adc').innerHTML=tag
+      }
+      function final(){
+        cartlog.qnt>10?cartlog.qnt=10:cartlog.qnt=cartlog.qnt;
+        cartlog.qnt<0?cartlog.qnt=0:cartlog.qnt=cartlog.qnt;
+        cartlog.qnt!=0?adc('+1'):adc('Add to Cart');
+        localStorage.setItem('crtlog',JSON.stringify(cartlog))
+      }
+
+      
+
+      function crt(qntop){
+        if (qntop==='1'){
+          cartlog.qnt>10?``:cartlog.qnt<0?cartlog.qnt=1:cartlog.qnt++;
+          document.querySelector('.js-cart').innerHTML=cartlog.qnt>10 ? `The cart is full`:`Cart Quantity: ${cartlog.qnt}`;
+          final()
+        }
+        else if(qntop==='2'){
+          cartlog.qnt==9?nine=true:nine==true?nine=false:nine=false;
+          cartlog.qnt>10?``:cartlog.qnt<0?cartlog.qnt=2:cartlog.qnt==9?``:cartlog.qnt=cartlog.qnt+2;
+          document.querySelector('.js-cart').innerHTML=cartlog.qnt>10 ? `The cart is full`:nine==true?`Space for only one item more`:`Cart Quantity: ${cartlog.qnt}`;
+          final()
+        }
+        else if(qntop==='R'){
+          cartlog.qnt>10?cartlog.qnt=9:cartlog.qnt<0?``:cartlog.qnt--;
+          document.querySelector('.js-cart').innerHTML=cartlog.qnt<0 ? `The cart is empty`:`Cart Quantity: ${cartlog.qnt}`;
+          final()
+        }
+        else if(qntop==='-2'){
+          cartlog.qnt==1?one=true:one==true?one=false:one=false;
+          cartlog.qnt>10?cartlog.qnt=8:cartlog.qnt<0?``:cartlog.qnt==1?``:cartlog.qnt-=2;
+          document.querySelector('.js-cart').innerHTML=cartlog.qnt<0 ? `The cart is empty`:one==true?`Only one item left`:`Cart Quantity: ${cartlog.qnt}`;
+          final()
+        }
+        else if(qntop==='-3'){
+          cartlog.qnt==1?one=true:one==true?one=false:one=false;
+          cartlog.qnt==2?two=true:two==true?two=false:two=false;
+          cartlog.qnt>10?cartlog.qnt=7:cartlog.qnt<0?``:cartlog.qnt==1?``:cartlog.qnt==2?``:cartlog.qnt=cartlog.qnt-3;
+          document.querySelector('.js-cart').innerHTML=cartlog.qnt<0 ? `The cart is empty`:one==true?`Only one item left`:two==true?`Only two items left`:`Cart Quantity: ${cartlog.qnt}`;
+          final()
+        }
+      }
+      
+    </script>
+
+
+
+
+    <style>
+      .tgl{
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+      }
+      .er{
+        color: red;
+      }
+      .calcbtn,.opbtn{
+        border-radius: 25px;
+        width: 50px;
+        height: 50px;
+        border:none;
+        background-color: rgb(59, 59, 59);
+        color: white;
+      }
+      .opbtn{
+        background-color: rgb(244, 167, 0);
+      }
+    </style>
+
+
+    <button class="js-gmng" onclick="gmng(document.querySelector('.js-gmng').classList[0])">
+      Gaming
+    </button>
+    <button class="js-bt2" onclick="gmng(document.querySelector('.js-bt2').classList[0])">
+      Button1
+    </button>
+    <button class="js-bt3" onclick="gmng(document.querySelector('.js-bt3').classList[0])">
+      Button2
+    </button>
+    <script>
+      function gmng(cls){
+        cls='.'+cls
+        if (document.querySelector(cls).classList.contains('tgl')){
+          document.querySelector(cls).classList.remove('tgl')
+        }
+        else{
+          document.querySelector(cls).classList.add('tgl')
+        }
+      }
+    </script>
+
+<br>
+
+    <button class="js-gng" onclick="gng(document.querySelector('.js-gng').classList[0])">
+      Gaming
+    </button>
+    <button class="js-b2" onclick="gng(document.querySelector('.js-b2').classList[0])">
+      Button1
+    </button>
+    <button class="js-b3" onclick="gng(document.querySelector('.js-b3').classList[0])">
+      Button2
+    </button>
+    <script>
+        let t=0
+      function gng(clss){
+        clss='.'+clss
+        if (t==0){
+          if (!document.querySelector(clss).classList.contains('tgl')){
+            document.querySelector(clss).classList.add('tgl')
+            t=1
+          }
+        }
+        else if(document.querySelector(clss).classList.contains('tgl')){
+            document.querySelector(clss).classList.remove('tgl')
+            t=0
+        }
+      }
+    </script>

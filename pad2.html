@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10</title>
+    <style>
+      .tgl{
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+      }
+      .er{
+        color: red;
+      }
+      .calcbtn,.opbtn{
+        border-radius: 25px;
+        width: 50px;
+        height: 50px;
+        border:none;
+        background-color: rgb(59, 59, 59);
+        color: white;
+      }
+      .opbtn{
+        background-color: rgb(244, 167, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="js-button" onclick="test()">Test</button>
+    <script>
+      function test(){
+        if (document.querySelector('.js-button').classList.contains('js-button')){
+          console.log(document.querySelector('.js-button').classList.contains('js-button'))
+        }
+        else{
+          console.log(document.querySelector('.js-button').classList.contains('js-button'))
+        }
+      }
+    </script>
+<br>
+
+    <button class="js-gmng" onclick="gmng(document.querySelector('.js-gmng').classList[0])">
+      Gaming
+    </button>
+    <button class="js-bt2" onclick="gmng(document.querySelector('.js-bt2').classList[0])">
+      Button1
+    </button>
+    <button class="js-bt3" onclick="gmng(document.querySelector('.js-bt3').classList[0])">
+      Button2
+    </button>
+    <script>
+      function gmng(cls){
+        cls='.'+cls
+        if (document.querySelector(cls).classList.contains('tgl')){
+          document.querySelector(cls).classList.remove('tgl')
+        }
+        else{
+          document.querySelector(cls).classList.add('tgl')
+        }
+      }
+    </script>
+
+<br>
+
+    <button class="js-gng" onclick="gng(document.querySelector('.js-gng').classList[0])">
+      Gaming
+    </button>
+    <button class="js-b2" onclick="gng(document.querySelector('.js-b2').classList[0])">
+      Button1
+    </button>
+    <button class="js-b3" onclick="gng(document.querySelector('.js-b3').classList[0])">
+      Button2
+    </button>
+    <script>
+        let t=0
+      function gng(clss){
+        clss='.'+clss
+        if (t==0){
+          if (!document.querySelector(clss).classList.contains('tgl')){
+            document.querySelector(clss).classList.add('tgl')
+            t=1
+          }
+        }
+        else if(document.querySelector(clss).classList.contains('tgl')){
+            document.querySelector(clss).classList.remove('tgl')
+            t=0
+        }
+      }
+    </script>
+
+<br>
+
+    <div>
+      <p>
+        Amazon Shipping Calculator<br>
+        Orders under $40 = +$10 shipping<br>
+        Orders over $40 = Free Shipping
+      </p>
+      <input class="js-price" type="text" placeholder="Enter the price" onkeydown="enterky(event.key)">
+      <button class="calc-button" onclick="calculate()">Calculate</button>
+      <p class="js-total">
+      </p>
+    </div>
+
+    <script>
+
+    function enterky(ky){
+      if (ky==='Enter'){
+        calculate()
+      }
+    }
+    
+    function calculate(){
+      const priceElement=document.querySelector('.js-price')
+      let price=Number(priceElement.value)
+      if (price<0){
+        document.querySelector('.js-total').classList.add('er')
+        document.querySelector('.js-total').innerHTML=`Error: cost cannot be less than $0`
+      }
+      else{
+        if (document.querySelector('.js-total').classList.contains('er')){
+          document.querySelector('.js-total').classList.remove('er')
+        }
+        if (price<40&&price!=0){
+          document.querySelector('.js-total').innerHTML=`$${price+10}`
+        }
+        else{
+          document.querySelector('.js-total').innerText=`$${price}`
+        }
+      }
+    }
+      
+    
+    </script>
+
+
+<br>
+
+    <div style="display: flex;flex-direction: column;row-gap: 10px;position: absolute;left:0px;right: 0px;justify-self: center;top: 0px;bottom: 0px; align-self: center;background-color: black;color: white;">
+            <div>
+              <p class="js-calci">
+                <br>
+              </p>
+            </div>
+            <div>
+              <button class="calcbtn" onclick="number(1)">1</button>
+              <button class="calcbtn" onclick="number(2)">2</button>
+              <button class="calcbtn" onclick="number(3)">3</button>
+              <button class="calcbtn opbtn" onclick="operation(`+`)">+</button>
+            </div>
+            <div>
+              <button class="calcbtn" onclick="number(4)">4</button>
+              <button class="calcbtn" onclick="number(5)">5</button>
+              <button class="calcbtn" onclick="number(6)">6</button>
+              <button class="calcbtn opbtn" onclick="operation(`-`)">-</button>
+            </div>
+            <div>
+              <button class="calcbtn" onclick="number(7)">7</button>
+              <button class="calcbtn" onclick="number(8)">8</button>
+              <button class="calcbtn" onclick="number(9)">9</button>
+              <button class="calcbtn opbtn" onclick="operation(`*`)">*</button>
+            </div>
+            <div>
+              <button class="calcbtn" onclick="number(0)">0</button>
+              <button class="calcbtn" onclick="operation(`.`)">.</button>
+              <button class="calcbtn" onclick="equals()">=</button>
+              <button class="calcbtn opbtn" onclick="operation(`/`)">/</button>
+            </div>
+            <div>
+              <button class="calcbtn" onclick="rsdp(prev)">x</button>
+              <button class="calcbtn" onclick="prev=``; str=``; rsdp('<br>');localStorage.removeItem('calc')">Clear</button>
+            </div>
+          </div>
+        <script>
+          let str=``;
+          let res=0;
+          let prev=``;
+          let answr=``;
+
+          loaddisplay()
+          function loaddisplay(){
+              if (localStorage.getItem('calc')===null){
+                rsdp('<br>')
+              }
+              else{
+                rsdp(localStorage.getItem('calc'))
+              }
+          }
+
+          function equals(){
+            prev=``;
+            if (str!=``){
+              res=eval(str);
+              answr=str+`=${res}`
+              rsdp(answr);
+              localStorage.setItem('calc',answr)
+            }
+            else{
+              loaddisplay()
+            }
+          }
+
+          function number(num){
+            str=str+num;
+            rsdp(str)
+          }
+
+          function operation(op){
+            prev=str;
+            str=str+op;
+            rsdp(str)
+          }
+
+          function rsdp(reslt){
+            document.querySelector('.js-calci').innerHTML=reslt
+          }
+        </script>
+
+  </body>
+</html>

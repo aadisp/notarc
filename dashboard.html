@@ -2,9 +2,11 @@
 <html>
   <head>
     <title>Dashboard notarc</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="buysheetdb.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Welcome!</h1>
+    <!--<h1>Welcome!</h1>
     <p id="userEmail"></p>
     <button onclick="logoutUser()">Logout</button>
 
@@ -39,7 +41,103 @@
       window.logoutUser = () => {
         signOut(auth);
       }
-    </script>
+    </script>-->
         
+
+    <div class="nav-bar">
+      <div>
+        <img class="nav-bar-logo" src="img/ntrclogo.png">
+      </div>
+      <div class="logout">
+        <button>Logout</button>
+      </div>
+    </div>
+
+    <div class="product-page-content">
+      <div class="content-right">
+        <div class="container-xxl py-5" id="products"style="background pink;">
+          <div class="container" style="background-color aqua;">
+            <div class="row g-4" style="justify-content: center; font-size: xx-large;font-weight: 900;color: rgb(80, 80, 80);padding-top: 0px; background-color bisque;">
+
+              <div class="buypad">
+                
+                  <div class="buyprdct">
+                    <div class="prdctimg"><img class="prdctimage" src="img/prdctimg.png"></div>
+                    <div class="prdctname">KIT-QUAD COPTER</div>
+                    <div class="prdctkit">F450 Arduino-Assembled Kit</div>
+                    <div class="prdctmarkt">
+                      <div class="prdctprice">₹14,999</div>
+                      <div class="prdctcart"><button class="prdctcartbtn"  onclick="addTOCart()">Remove</button></div>
+                    </div>
+                  </div>
+                  <div class="buyprdct">
+                    <div class="prdctimg"><img class="prdctimage" src="img/prdct2.png"></div>
+                    <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+                    <div class="prdctkit">Arduino Based-only kit</div>
+                    <div class="prdctmarkt">
+                      <div class="prdctprice">₹12,999</div>
+                      <div class="prdctcart"><button class="prdctcartbtn">Add to cart</button></div>
+                    </div>
+                  </div>
+                  <div class="buyprdct">
+                    <div class="prdctimg"><img class="prdctimage" src="img/prdctimg.png"></div>
+                    <div class="prdctname">KIT-QUAD COPTER</div>
+                    <div class="prdctkit">F450 Arduino-Assembled Kit</div>
+                    <div class="prdctmarkt">
+                      <div class="prdctprice">₹14,999</div>
+                      <div class="prdctcart"><button class="prdctcartbtn"  onclick="addTOCart()">Remove</button></div>
+                    </div>
+                  </div>
+                  <div class="buyprdct">
+                    <div class="prdctimg"><img class="prdctimage" src="img/prdctimg.png"></div>
+                    <div class="prdctname">KIT-QUAD COPTER</div>
+                    <div class="prdctkit">F450 Arduino-Assembled Kit</div>
+                    <div class="prdctmarkt">
+                      <div class="prdctprice">₹14,999</div>
+                      <div class="prdctcart"><button class="prdctcartbtn"  onclick="addTOCart()">Remove</button></div>
+                    </div>
+                  </div>
+                  <div class="buyprdct">
+                    <div class="prdctimg"><img class="prdctimage" src="img/prdctimg.png"></div>
+                    <div class="prdctname">KIT-QUAD COPTER</div>
+                    <div class="prdctkit">F450 Arduino-Assembled Kit</div>
+                    <div class="prdctmarkt">
+                      <div class="prdctprice">₹14,999</div>
+                      <div class="prdctcart"><button class="prdctcartbtn"  onclick="addTOCart()">Remove</button></div>
+                    </div>
+                  </div>
+
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="productBuy.js"></script>
+      <div class="content-left">
+          <div class="user-profile">
+          <p class="profile-p-tag">Profile</p>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar-elements">
+            <p class="sidebar-p-tag">Orders</p>
+          </div>
+          <!--<div class="sidebar-elements">
+            <p class="sidebar-p-tag">Personal Details</p>
+          </div>-->
+      </div>
+      </div>
+      
+
+    </div>
+
+
+  
+    <footer class="footer">
+      <div>
+        <img class="footer-logo" src="img/ntrclogo.png">
+      </div>
+    </footer>
+
   </body>
 </html>

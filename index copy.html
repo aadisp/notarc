@@ -37,6 +37,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 
+    <link href="buysheetdb.css" rel="stylesheet">
+
  
     <style>
         .smllr{
@@ -139,7 +141,7 @@
     </style>
 </head>
 
-<body> 
+<body style="background-image: url(img/bggg.png);background-size:80%;background-attachment: fixed;"> 
 
     <div style="align-items: center;" id="adwall">
         <div class="aw">
@@ -201,7 +203,6 @@
                         <ul class="dropdown-menu" aria-labelledby="moreDropdown">
                             <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
                             <li><a class="dropdown-item" href="#team">Team</a></li>
-                            <li><a class="dropdown-item" href="#company_Profile">View Company Profile</a></li>
                             <li><a class="dropdown-item" href="#Testimonial">Testimonial</a></li>
                         </ul>
                         </li>
@@ -387,21 +388,171 @@
 
 
 
-<div class="container-xxl py-5" id="products">
-  <div class="container">
-    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+ <div class="container-xxl py-5" id="products"style="background pink;">
+  <div class="container" style="background-color aqua;">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s" style="background-color aquamarine;">
       <h5 class="section-title ff-secondary text-center text-primary fw-normal">Our Products</h5>
-      <h1 class="mb-5">Buy Drones, Components, and more</h1>
+      <h1 class="mb-5">DRONE KITS AND COMPONENTS</h1>
     </div>
-    <div class="row g-4" style="justify-content: center; font-size: xx-large;font-weight: 900;color: rgb(80, 80, 80);padding-top: 0px;">
-      
-      <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s" style="justify-content: center; font-size: xx-large;font-weight: 900;color: rgb(80, 80, 80);padding-left: 80px;">
-        ----Coming Soon----
+    <div class="row g-4" style="justify-content: center; font-size: xx-large;font-weight: 900;color: rgb(80, 80, 80);padding-top: 0px; background-color bisque;">
+
+      <div class="buypad">
+        
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdctimg.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER</div>
+            <div class="prdctkit">F450 Arduino-Assembled Kit</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹14,999</div>
+              <div class="prdctcart js-prd1ctcartbtns"><button class="prdctcartbtn" onclick="addTOCart('prdct1',14999,'.js-prd1ctcartbtns')">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct2.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Arduino Based-only kit</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹12,999</div>
+              <div class="prdctcart js-prd2ctcartbtns"><button class="prdctcartbtn" onclick="addTOCart('prdct2',12999,'.js-prd2ctcartbtns')">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct3.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">K K board-Assembled</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹16,999</div>
+              <div class="prdctcart js-prd3ctcartbtns"><button class="prdctcartbtn" onclick="addTOCart('prdct3',16999,'.js-prd3ctcartbtns')">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct3.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">K K board-only kit</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹14,999</div>
+              <div class="prdctcart js-prd4ctcartbtns"><button class="prdctcartbtn" onclick="addTOCart('prdct4',14999,'.js-prd4ctcartbtns')">Add to cart</button></div>
+            </div>
+          </div>
+          <!--<div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct5.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Crossflight controller-Assembled</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹18,499</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct5.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Crossflight controller-only kit</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹17,499</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct7.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Arduino Based-Assembled</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹15,000</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct7.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Arduino Based-only kit</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹15,000</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct7.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Arduino Based-Assembled</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹15,000</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct7.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Arduino Based-only kit</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹15,000</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct7.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Arduino Based-Assembled</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹15,000</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct7.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Arduino Based-only kit</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹15,000</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct7.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Arduino Based-Assembled</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹15,000</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct7.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Arduino Based-only kit</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹15,000</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct7.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Arduino Based-Assembled</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹15,000</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>
+          <div class="buyprdct">
+            <div class="prdctimg"><img class="prdctimage" src="img/prdct7.png"></div>
+            <div class="prdctname">KIT-QUAD COPTER (F450)</div>
+            <div class="prdctkit">Arduino Based-only kit</div>
+            <div class="prdctmarkt">
+              <div class="prdctprice">₹15,000</div>
+              <div class="prdctcart"><button class="prdctcartbtn" onclick="addTOCart()">Add to cart</button></div>
+            </div>
+          </div>-->
+
       </div>
+      
+      <!--<div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s" style="justify-content: center; font-size: xx-large;font-weight: 900;color: rgb(80, 80, 80);padding-left: 80px;background-color blue;">
+        --comingsoon--
+      </div>-->
     </div>
   </div>
 </div>
 
+<script src="productBuy.js"></script>
 
 
 
@@ -489,7 +640,7 @@
 
 
 
-  <div class="portfolio" id="company_Profile">
+ <!-- <div class="portfolio" id="company_Profile">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h5 class="section-title ff-secondary text-center text-primary fw-normal">Company Profile</h5>
@@ -511,7 +662,7 @@
                 <a href="companyProfile.html"><button id="loadMore" class="btn btn-primary bttn">&#x26F6;</button></a>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <br>
     <br>
@@ -612,13 +763,13 @@
                 </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item sixth">
+                <!--<div class="col-lg-4 col-md-6 col-sm-12 portfolio-item sixth">
                 <div class="portfolio-wrap">
                     <a href="img/gallery/10.jpg" data-lightbox="portfolio">
                     <img src="img/gallery/10.jpg" alt="Gallery Image">
                     </a>
                 </div>
-                </div>
+                </div>-->
 
                 <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item sixth">
                 <div class="portfolio-wrap">
@@ -1491,11 +1642,11 @@ document.addEventListener("DOMContentLoaded", function() {
   onAuthStateChanged(auth, (user) => {
     if (user) {
       // ✅ Currently logged in
-      authLink.innerText = "Logout";
-      window.logoutUser = () => {
+      authLink.innerText = "View Dashboard";
+      /*window.logoutUser = () => {
         signOut(auth);
-      }
-      authLink.href = "login.html";
+      }*/
+      authLink.href = "testpage.html";
     
     } 
     else if (hasLoggedInBefore) {
