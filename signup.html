@@ -263,6 +263,10 @@
       <div class="twod" style="background-color thistle">Sign Up using email</div>
       <div class="threefourd">
         <div class="threed" style="background-color silver;display: flex;">
+          <div class="tonedd" style="background-color rebeccapurple;"><img class="ml" src="img/mll.png" style="opacity:0"></div>
+          <div class="ttwodd" style="background-color red;"><input class="twoddml" type="email" placeholder="Username" id="username"></div>
+        </div>
+        <div class="threed" style="background-color silver;display: flex;">
           <div class="tonedd" style="background-color rebeccapurple;"><img class="ml" src="img/mll.png"></div>
           <div class="ttwodd" style="background-color red;"><input class="twoddml" type="email" placeholder="Email" id="email"></div>
         </div>
@@ -296,6 +300,7 @@
         signInWithPopup,
         GoogleAuthProvider
       } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+      import { getFirestore, doc, setDoc,getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
       const firebaseConfig = {
         apiKey: "AIzaSyAx1vpBGEKGcKHMnSQuAfBxH-NeiF9BUM8",
@@ -308,14 +313,27 @@
 
       const app = initializeApp(firebaseConfig);
       const auth = getAuth(app);
+      const db = getFirestore(app);
       const provider = new GoogleAuthProvider();
 
       // Signup Function
       window.signupUser = async () => {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
+        const username = document.getElementById("username").value;
+        if (!username) {
+          alert("Please enter a username");
+          return;
+        }
         try {
-          await createUserWithEmailAndPassword(auth, email, password);
+          const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+          const user = userCredential.user;
+          await setDoc(doc(db, "users", user.uid), {
+            email: user.email,
+            username: username,
+            role: "user",
+            createdAt: new Date()
+          });
           /**window.location.href = "dashboard.html";**/
           localStorage.setItem("hasLoggedInBefore", "true");
           window.location.href = "index.html";
@@ -341,7 +359,18 @@
       // Google Login Function
       window.googleLogin = async () => {
         try {
-          await signInWithPopup(auth, provider);
+          const result = await signInWithPopup(auth, provider);
+          const user = result.user;
+          const ref = doc(db, "users", user.uid);
+          const snap = await getDoc(ref);
+          if (!snap.exists()) {
+          await setDoc(ref, {
+            email: user.email,
+            username: user.displayName || "User",
+            role: "user",
+            createdAt: new Date()
+          });
+        }
           /**window.location.href = "dashboard.html";**/
           localStorage.setItem("hasLoggedInBefore", "true");
           window.location.href = "index.html";

@@ -29,7 +29,8 @@ header{
 main{
   background-color black;
   color white;
-  font-family: League Spartan;
+  padding-bottom: 600px;
+  font-family: League Spartan
 }
 .main-left-side{
   background-color red;
@@ -68,7 +69,6 @@ main{
   z-index: 0;
   top: 105px;
   left: 250px;
-  padding-bottom: 300px;
 }
 .checkout{
   justify-self: end;
@@ -78,14 +78,9 @@ main{
 footer{
   background-color: rgba(15, 23, 43);
   color: white;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   margin-top: auto;
   display: flex;
   z-index: 3;
-  height: 250px
 }
 
 .empty-right-side{
@@ -115,6 +110,7 @@ footer{
 .browse-btn:active{
   background-color: rgb(232, 232, 232);
   color: rgb(33, 33, 33);
+  padding: 10px 105px 10px 105px;
   font-size: small;
   transition: 0.1s;
 }
